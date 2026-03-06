@@ -1,0 +1,710 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// SSR: log visit server-side
+const timestamp = new Date().toISOString();
+console.log(`[SSR] Landing page visited at ${timestamp}`);
+---
+
+<Layout title="Agent-Led Dev — Autonomous AI Development Teams">
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo">
+        <span class="logo-icon">⬡</span>
+        <span>Agent-Led Dev</span>
+      </a>
+      <a href="#contact" class="btn btn--outline btn--sm">Get in Touch</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="badge">Autonomous Development</div>
+      <h1 class="hero__headline">
+        Software Built by<br />
+        <span class="gradient-text">AI Agents, Led by AI</span>
+      </h1>
+      <p class="hero__subheadline">
+        Imagine a development team that never sleeps, never misses a deadline, and
+        continuously improves itself. Our agent-leading-agent architecture delivers
+        production-ready software at a fraction of traditional cost and time.
+      </p>
+      <div class="hero__cta">
+        <a href="#contact" class="btn btn--primary btn--lg">Get Early Access</a>
+        <a href="#how-it-works" class="btn btn--ghost btn--lg">See How It Works</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__value">10×</span>
+          <span class="stat__label">Faster Delivery</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__value">90%</span>
+          <span class="stat__label">Cost Reduction</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__value">24/7</span>
+          <span class="stat__label">Development Velocity</span>
+        </div>
+      </div>
+    </div>
+    <!-- Background grid decoration -->
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="hero__glow" aria-hidden="true"></div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how-it-works" class="section section--alt">
+    <div class="container">
+      <div class="section__header">
+        <div class="badge">Architecture</div>
+        <h2 class="section__title">How Agent-Leading-Agent Works</h2>
+        <p class="section__subtitle">
+          A hierarchical AI system where an orchestrator agent coordinates a team of
+          specialist sub-agents, each an expert in their domain.
+        </p>
+      </div>
+      <div class="flow">
+        <div class="flow__step">
+          <div class="flow__icon flow__icon--lead">🧠</div>
+          <div class="flow__content">
+            <h3>Lead Orchestrator Agent</h3>
+            <p>A senior AI agent breaks down your requirements, plans the architecture, assigns tasks to specialist agents, and reviews all outputs before delivery.</p>
+          </div>
+        </div>
+        <div class="flow__arrow">↓</div>
+        <div class="flow__row">
+          <div class="flow__step flow__step--sub">
+            <div class="flow__icon">💻</div>
+            <div class="flow__content">
+              <h3>Code Agent</h3>
+              <p>Writes clean, tested, production-ready code following your conventions.</p>
+            </div>
+          </div>
+          <div class="flow__step flow__step--sub">
+            <div class="flow__icon">🔍</div>
+            <div class="flow__content">
+              <h3>Review Agent</h3>
+              <p>Conducts deep code review, security audits, and quality assurance.</p>
+            </div>
+          </div>
+          <div class="flow__step flow__step--sub">
+            <div class="flow__icon">🧪</div>
+            <div class="flow__content">
+              <h3>Test Agent</h3>
+              <p>Generates comprehensive test suites and validates behaviour end-to-end.</p>
+            </div>
+          </div>
+          <div class="flow__step flow__step--sub">
+            <div class="flow__icon">🚀</div>
+            <div class="flow__content">
+              <h3>Deploy Agent</h3>
+              <p>Automates CI/CD pipelines, infrastructure provisioning, and deployments.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flow__arrow">↓</div>
+        <div class="flow__step flow__step--output">
+          <div class="flow__icon flow__icon--output">✅</div>
+          <div class="flow__content">
+            <h3>Reviewed &amp; Delivered</h3>
+            <p>The orchestrator agent validates all outputs, ensuring consistency and quality before shipping to you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="section">
+    <div class="container">
+      <div class="section__header">
+        <div class="badge">Capabilities</div>
+        <h2 class="section__title">Everything a Development Team Does — Automated</h2>
+        <p class="section__subtitle">
+          Our AI agents handle the full software development lifecycle, from idea to production.
+        </p>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <div class="feature__icon">📐</div>
+          <h3 class="feature__title">Architecture &amp; Planning</h3>
+          <p class="feature__desc">The lead agent designs system architecture, chooses appropriate tech stacks, and creates detailed implementation plans before writing a single line of code.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">⚡</div>
+          <h3 class="feature__title">Parallel Execution</h3>
+          <p class="feature__desc">Multiple specialist agents work simultaneously on different features and components, dramatically compressing delivery timelines.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">🔄</div>
+          <h3 class="feature__title">Self-Improving Loop</h3>
+          <p class="feature__desc">Agents learn from feedback and prior project outcomes, continuously improving code quality and process efficiency over time.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">🛡️</div>
+          <h3 class="feature__title">Built-In Security</h3>
+          <p class="feature__desc">A dedicated security agent audits every code change, proactively identifying vulnerabilities before they reach production.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">📊</div>
+          <h3 class="feature__title">Full Transparency</h3>
+          <p class="feature__desc">Every decision, commit, and review is logged and traceable. You always know what was built, why, and how it was tested.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">🔧</div>
+          <h3 class="feature__title">Seamless Integration</h3>
+          <p class="feature__desc">Fits into your existing GitHub workflows, issue trackers, Slack channels, and deployment pipelines with minimal setup.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section__header">
+        <div class="badge">Use Cases</div>
+        <h2 class="section__title">Built for Modern Software Teams</h2>
+        <p class="section__subtitle">
+          Whether you're a startup moving fast or an enterprise modernising legacy systems,
+          autonomous agents accelerate your roadmap.
+        </p>
+      </div>
+      <div class="use-cases">
+        <div class="use-case">
+          <span class="use-case__emoji">🚀</span>
+          <h3>Startup MVPs</h3>
+          <p>Go from idea to deployed product in days, not months. Validate your concept before spending a fortune on a traditional dev team.</p>
+        </div>
+        <div class="use-case">
+          <span class="use-case__emoji">🏢</span>
+          <h3>Enterprise Modernisation</h3>
+          <p>Migrate legacy codebases, refactor monoliths into microservices, and add new capabilities — without disrupting existing operations.</p>
+        </div>
+        <div class="use-case">
+          <span class="use-case__emoji">📈</span>
+          <h3>Scale Without Hiring</h3>
+          <p>Handle surges in development demand instantly. Scale your output without the overhead of recruiting, onboarding, and managing engineers.</p>
+        </div>
+        <div class="use-case">
+          <span class="use-case__emoji">🔁</span>
+          <h3>Maintenance &amp; Support</h3>
+          <p>Keep your software current and healthy. Agents proactively monitor, patch, and improve your systems around the clock.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / CTA -->
+  <section id="contact" class="section section--contact">
+    <div class="container">
+      <div class="cta-box">
+        <div class="badge">Early Access</div>
+        <h2 class="cta-box__title">Ready to Build with an AI-Led Team?</h2>
+        <p class="cta-box__subtitle">
+          We're working with a select group of forward-thinking companies to refine and
+          deploy our agent-leading-agent platform. If you're interested in transforming
+          how software gets built, we'd love to hear from you.
+        </p>
+        <form class="contact-form" action="/api/contact" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Work Email</label>
+              <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="company">Company &amp; Role</label>
+            <input type="text" id="company" name="company" placeholder="Acme Corp — CTO" />
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us about your project</label>
+            <textarea id="message" name="message" rows="4" placeholder="What are you trying to build? What's your biggest development bottleneck?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg btn--full">
+            Send Message →
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="/" class="nav__logo">
+          <span class="logo-icon">⬡</span>
+          <span>Agent-Led Dev</span>
+        </a>
+        <p>Autonomous software development,<br />powered by AI agents.</p>
+      </div>
+      <div class="footer__links">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© {new Date().getFullYear()} Agent-Led Dev. All rights reserved.</p>
+    </div>
+  </footer>
+</Layout>
+
+<style>
+  /* ---------- Nav ---------- */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 14, 26, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1rem;
+  }
+  .nav__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+  }
+  .logo-icon {
+    color: var(--color-accent-light);
+    font-size: 1.4rem;
+  }
+
+  /* ---------- Layout helpers ---------- */
+  .container {
+    max-width: 1100px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+  .section {
+    padding-block: 5rem;
+  }
+  .section--alt {
+    background: var(--color-surface);
+  }
+  .section__header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+  .section__title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    margin-block: 0.75rem;
+    letter-spacing: -0.03em;
+  }
+  .section__subtitle {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-inline: auto;
+  }
+
+  /* ---------- Badge ---------- */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.85rem;
+    background: var(--color-accent-glow);
+    border: 1px solid rgba(99, 102, 241, 0.4);
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-accent-light);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.65rem 1.5rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all var(--transition);
+    white-space: nowrap;
+  }
+  .btn--primary {
+    background: var(--color-accent);
+    color: #fff;
+    border-color: var(--color-accent);
+  }
+  .btn--primary:hover {
+    background: var(--color-accent-light);
+    border-color: var(--color-accent-light);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.35);
+  }
+  .btn--outline {
+    background: transparent;
+    color: var(--color-text);
+    border-color: var(--color-border);
+  }
+  .btn--outline:hover {
+    border-color: var(--color-accent-light);
+    color: var(--color-accent-light);
+  }
+  .btn--ghost {
+    background: transparent;
+    color: var(--color-text-muted);
+    border-color: transparent;
+  }
+  .btn--ghost:hover {
+    color: var(--color-text);
+    background: var(--color-surface-2);
+  }
+  .btn--sm { padding: 0.4rem 1rem; font-size: 0.85rem; }
+  .btn--lg { padding: 0.85rem 2rem; font-size: 1.05rem; }
+  .btn--full { width: 100%; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    padding-block: 7rem 5rem;
+    overflow: hidden;
+  }
+  .hero__inner {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+  .hero__headline {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    letter-spacing: -0.04em;
+    margin-block: 1rem 1.5rem;
+  }
+  .gradient-text {
+    background: linear-gradient(135deg, #818cf8 0%, #a78bfa 50%, #38bdf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero__subheadline {
+    max-width: 620px;
+    margin-inline: auto;
+    color: var(--color-text-muted);
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+  .hero__cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+  }
+  .hero__stats {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 1.5rem 2rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+  }
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+  }
+  .stat__value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--color-accent-light);
+    letter-spacing: -0.03em;
+  }
+  .stat__label {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .stat__divider {
+    width: 1px;
+    height: 2.5rem;
+    background: var(--color-border);
+  }
+  .hero__grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(99, 102, 241, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99, 102, 241, 0.06) 1px, transparent 1px);
+    background-size: 50px 50px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
+  }
+  .hero__glow {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 500px;
+    background: radial-gradient(ellipse, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* ---------- Flow / How it works ---------- */
+  .flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .flow__step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.5rem 2rem;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    max-width: 600px;
+    width: 100%;
+  }
+  .flow__step--output {
+    background: rgba(99, 102, 241, 0.06);
+    border-color: rgba(99, 102, 241, 0.35);
+  }
+  .flow__icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  .flow__icon--lead { font-size: 2.5rem; }
+  .flow__icon--output { font-size: 2.5rem; }
+  .flow__content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.35rem;
+  }
+  .flow__content p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+  }
+  .flow__arrow {
+    font-size: 1.5rem;
+    color: var(--color-accent-light);
+    padding-block: 0.5rem;
+    opacity: 0.6;
+  }
+  .flow__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+    max-width: 900px;
+  }
+  .flow__step--sub {
+    max-width: 100%;
+    padding: 1.25rem 1.5rem;
+    background: var(--color-bg);
+  }
+
+  /* ---------- Features ---------- */
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  .feature {
+    padding: 1.75rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    transition: border-color var(--transition), transform var(--transition);
+  }
+  .feature:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+  .feature__icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .feature__title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  .feature__desc {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  /* ---------- Use Cases ---------- */
+  .use-cases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+  .use-case {
+    padding: 1.75rem;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+  }
+  .use-case__emoji {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+  .use-case h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+  }
+  .use-case p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  /* ---------- Contact / CTA ---------- */
+  .section--contact {
+    background: var(--color-bg);
+    padding-block: 5rem;
+  }
+  .cta-box {
+    max-width: 700px;
+    margin-inline: auto;
+    text-align: center;
+  }
+  .cta-box__title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    letter-spacing: -0.03em;
+    margin-block: 0.75rem 1rem;
+  }
+  .cta-box__subtitle {
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
+  }
+  .contact-form {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+  }
+  .form-group input,
+  .form-group textarea {
+    padding: 0.75rem 1rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color var(--transition);
+    resize: vertical;
+  }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: var(--color-text-subtle);
+  }
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  }
+
+  /* ---------- Footer ---------- */
+  .footer {
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    padding-block: 3rem 1.5rem;
+  }
+  .footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  .footer__brand p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin-top: 0.75rem;
+    line-height: 1.6;
+  }
+  .footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .footer__links a {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    transition: color var(--transition);
+  }
+  .footer__links a:hover {
+    color: var(--color-text);
+  }
+  .footer__bottom {
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.5rem;
+    color: var(--color-text-subtle);
+    font-size: 0.85rem;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 640px) {
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+    .flow__row {
+      grid-template-columns: 1fr;
+    }
+    .hero__stats {
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .stat__divider {
+      width: 3rem;
+      height: 1px;
+    }
+  }
+</style>

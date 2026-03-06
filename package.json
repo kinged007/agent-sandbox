@@ -1,0 +1,16 @@
+{
+  "name": "agent-led-dev",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "node ./dist/server/entry.mjs",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/node": "^9.5.4",
+    "astro": "^5.18.0"
+  }
+}
