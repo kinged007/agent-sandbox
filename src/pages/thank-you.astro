@@ -1,0 +1,108 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Message Received — Agent-Led Dev">
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo">
+        <span class="logo-icon">⬡</span>
+        <span>Agent-Led Dev</span>
+      </a>
+    </div>
+  </nav>
+
+  <section class="thank-you">
+    <div class="container thank-you__inner">
+      <div class="checkmark">✅</div>
+      <h1>Message Received!</h1>
+      <p>
+        Thanks for reaching out. We'll review your message and get back to you within
+        one business day. We're excited to explore how agent-led development could
+        work for your team.
+      </p>
+      <a href="/" class="btn btn--primary">Back to Home</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 14, 26, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1rem;
+  }
+  .nav__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+  }
+  .logo-icon {
+    color: var(--color-accent-light);
+    font-size: 1.4rem;
+  }
+  .container {
+    max-width: 1100px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+  .thank-you {
+    min-height: calc(100vh - 65px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1.5rem;
+  }
+  .thank-you__inner {
+    text-align: center;
+    max-width: 520px;
+  }
+  .checkmark {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+  }
+  h1 {
+    font-size: 2.25rem;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+  }
+  p {
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 2rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 1.05rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 200ms ease;
+    background: var(--color-accent);
+    color: #fff;
+    border-color: var(--color-accent);
+  }
+  .btn--primary:hover {
+    background: var(--color-accent-light);
+    border-color: var(--color-accent-light);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.35);
+  }
+</style>

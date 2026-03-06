@@ -1,0 +1,75 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Agent-Led Dev — Autonomous software development teams powered by AI agents, led by an AI orchestrator." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <style is:global>
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --color-bg: #0a0e1a;
+        --color-surface: #111827;
+        --color-surface-2: #1f2937;
+        --color-border: #374151;
+        --color-accent: #6366f1;
+        --color-accent-light: #818cf8;
+        --color-accent-glow: rgba(99, 102, 241, 0.15);
+        --color-text: #f9fafb;
+        --color-text-muted: #9ca3af;
+        --color-text-subtle: #6b7280;
+        --color-success: #10b981;
+        --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+        --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+        --radius: 0.75rem;
+        --transition: 200ms ease;
+      }
+
+      html {
+        font-family: var(--font-sans);
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-height: 100vh;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      img, svg {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        line-height: 1.2;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
