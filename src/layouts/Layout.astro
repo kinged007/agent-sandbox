@@ -67,9 +67,37 @@ const { title, description = "Agent-Led Dev — Autonomous software development 
         line-height: 1.2;
         font-weight: 700;
       }
+
+      .skip-link {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+
+      .skip-link:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        padding: 1rem;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
+        white-space: normal;
+        background: var(--color-surface);
+        color: var(--color-text);
+        z-index: 1000;
+        display: block;
+      }
     </style>
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <slot />
   </body>
 </html>

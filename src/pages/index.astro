@@ -6,7 +6,8 @@ const timestamp = new Date().toISOString();
 console.log(`[SSR] Landing page visited at ${timestamp}`);
 ---
 
-<Layout title="Agent-Led Dev — Autonomous AI Development Teams">
+  <Layout title="Agent-Led Dev — Autonomous AI Development Teams">
+  <main id="main">
   <!-- Navigation -->
   <nav class="nav">
     <div class="container nav__inner">
@@ -258,6 +259,7 @@ console.log(`[SSR] Landing page visited at ${timestamp}`);
       <p>© {new Date().getFullYear()} Agent-Led Dev. All rights reserved.</p>
     </div>
   </footer>
+  </main>
 </Layout>
 
 <style>
