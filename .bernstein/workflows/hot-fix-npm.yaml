@@ -1,0 +1,41 @@
+name: hot-fix-npm
+description: "Reproduce, fix, regression-test, and ship a hotfix in a tight loop (Node/npm variant)."
+version: "1.0.0"
+nodes:
+  - id: reproduce
+    agent: backend
+    prompt: |
+      Reproduce the incident: {goal}
+
+      Capture a minimal reproduction in debug/ and write the failing
+      test. Do not patch the code yet.
+
+  - id: confirm-failure
+    depends_on: [reproduce]
+    command: "npm run build 2>&1 | tail -n 30; npm test -- debug/ 2>&1 || node --test debug/ 2>&1 || echo \"no debug tests yet\""
+    timeout_seconds: 600
+
+  - id: fix
+    depends_on: [confirm-failure]
+    agent: backend
+    prompt: |
+      Apply the smallest correct fix that turns the reproducing test
+      green. Avoid drive-by changes - the goal is "land tonight, clean
+      up tomorrow".
+    fresh_context: true
+    timeout_seconds: 1800
+
+  - id: regression
+    depends_on: [fix]
+    command: "npm run build"
+    loop:
+      until: "npm run build"
+      max_iterations: 3
+    timeout_seconds: 1800
+
+  - id: changelog
+    depends_on: [regression]
+    agent: docs
+    prompt: |
+      Add a CHANGELOG entry under "Fixed" pointing at the original
+      issue and the test that now guards against it.

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "spec_digest": "158779798693baec054e81ac01d857cc66c331cb32d793ad61ebc9cac0f38e33",
+  "node_id": "reproduce",
+  "status": "failed",
+  "iterations": 1,
+  "exit_code": null,
+  "stdout": "",
+  "stderr": "",
+  "session_id": "",
+  "error": "agent-typed node requires a configured AgentSpawner",
+  "wall_time_seconds": 1.771608367562294e-05,
+  "condition_skipped": false
+}

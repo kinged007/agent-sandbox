@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "spec_name": "hot-fix-npm",
+  "spec_version": "1.0.0",
+  "spec_digest": "158779798693baec054e81ac01d857cc66c331cb32d793ad61ebc9cac0f38e33",
+  "node_ids": [
+    "reproduce",
+    "confirm-failure",
+    "fix",
+    "regression",
+    "changelog"
+  ],
+  "source": "hot-fix-npm"
+}
