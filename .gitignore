@@ -20,8 +20,3 @@ pnpm-debug.log*
 
 # astro cache
 .astro/
-
-# bernstein runtime (keep workflows)
-.sdd/
-.no_human/
-debug/
