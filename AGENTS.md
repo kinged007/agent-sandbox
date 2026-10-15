@@ -24,7 +24,7 @@ CI: `.github/workflows/ci.yml` runs `npm ci` + `npm run build` on push/PR to `ma
 
 - Follow existing Astro/TypeScript patterns in `src/`.
 - Keep `.env` out of commits; use `.env.example` as the template.
-- Do not publish anything derived from the private `tenantflex` org repos. See `docs/03-tenantflex.md` in the profile plan repo for context.
+- Do not commit secrets (API keys, tokens, .env). Only `.env.example` belongs in the repo.
 
 ## Deploy
 
