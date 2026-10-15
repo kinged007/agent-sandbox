@@ -7,9 +7,6 @@ Public showcase for autonomous coding agents — [sortie-loop](https://github.co
 
 This repo hosts an [Astro](https://astro.build) SSR landing page ("Agent-Led Dev") that agents modify end-to-end via Bernstein webhooks. Ideal for demonstrating autonomous delivery on a real codebase without risking product repos.
 
-![Demo](./docs/screenshot.png)
-> Screenshot to be added — run `npm run dev` and capture the landing page hero. Replace `docs/screenshot.png` when available.
-
 ## Install
 
 Requires Node 20+.
